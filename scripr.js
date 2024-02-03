@@ -8,8 +8,6 @@ async function getuser() {
     let inp = document.getElementById("inp").value
     let githubinfo = await fetch(`http://api.github.com/users/${inp.toLowerCase()}`)
     let gitres = await githubinfo.json()
-        // .then(res => res.json())
-        // .then(data => {
             img.src = gitres.avatar_url
             h1.innerText = gitres.login
             follow1.innerText = gitres.followers
@@ -17,8 +15,6 @@ async function getuser() {
             follow3.innerText = gitres.public_repos
             follow4.href = gitres.html_url
             follow4.innerText = gitres.html_url
-            console.log(gitres);
-        // })
 }
 let btn = document.getElementById("btn")
 
